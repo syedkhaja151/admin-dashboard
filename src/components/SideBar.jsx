@@ -3,10 +3,11 @@ import { Link, NavLink } from 'react-router-dom';
 import { SiShopware } from 'react-icons/si';
 import { MdOutlineCancel } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+
 import { links } from '../data/Data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
-const SideBar = () => {
+const Sidebar = () => {
   const { currentColor, activeMenu, setActiveMenu, screenSize } = useStateContext();
 
   const handleCloseSideBar = () => {
@@ -31,7 +32,7 @@ const SideBar = () => {
                 type="button"
                 onClick={() => setActiveMenu(!activeMenu)}
                 style={{ color: currentColor }}
-                className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
+                className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:overflow-hidden"
               >
                 <MdOutlineCancel />
               </button>
@@ -66,4 +67,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default Sidebar;
