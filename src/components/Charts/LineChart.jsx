@@ -2,7 +2,7 @@ import React from 'react'
 
 const LineChart = () => {
   return (
-    <div>LineChart</div>
+    <div>Line Chart </div>
   )
 }
 
